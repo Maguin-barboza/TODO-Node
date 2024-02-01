@@ -1,0 +1,28 @@
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: todouser
+      MYSQL_PASSWORD: todopass
+      MYSQL_DATABASE: todoNode
+    volumes:
+      - volmysql123456:/var/lib/mysql
+    networks:
+      - todoNet
+
+  todonode:
+    image: todonode
+    ports:
+      - 3000:3000
+    networks:
+      - todoNet
+
+volumes:
+  volmysql123456:
+
+networks:
+  todoNet:
+    driver: bridge
