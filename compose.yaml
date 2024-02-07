@@ -18,10 +18,14 @@ services:
     image: todonode
     ports:
       - 3000:3000
-
-volumes:
-  mysqlvol1234:
+    networks:
+      - todoNet
+    depends_on:
+      - mysql
 
 networks:
   todoNet:
     driver: bridge
+
+volumes:
+  mysqlvol1234:

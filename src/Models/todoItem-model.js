@@ -23,6 +23,8 @@ const TodoItem = db.define('TodoItem', {
         type: DataTypes.BOOLEAN,
         allowNull: false
     }
-}, {tableName: 'TodoItems', timestamps: false});
+}, {tableName: 'TodoItems', timestamps: false });
+
+// User.sync()
 
 module.exports = TodoItem;
