@@ -4,7 +4,7 @@ Run it with thses commands below:
    * docker build -t todo-node .
    * docker compose up -d
 
-The application will run on the port 3000.
+The application will run on port 3000.
 
 
 **Routes:**
