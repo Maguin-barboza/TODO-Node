@@ -1,7 +1,17 @@
-Este projeto foi desenvolvido para aplicação dos conhecimentos docker obtidos.
+This project was developed to practice my docker skills.
 
-Para executá-lo, esteja certo que está na pasta da aplicação (todo-node) e então excute os comandos a seguir:
+Run it with thses commands below:
    * docker build -t todo-node .
    * docker compose up -d
 
-A aplicação irá iniciar na porta 3000 e faz comunicação com banco de dados mysql.
+The application will run on the port 3000.
+
+
+**Routes:**
+- GET - localhost:3000/todoitem/ -> Get all ToDo items
+- GET - localhost:3000/todoitem/[id] -> Get a specific item
+- POST - localhost:3000/ -> Add a new ToDo item.
+  * Request:
+    { "Description": "", "UserId": 1, "Date": "", "Done": false }
+
+- PUT - localhost:3000/todoitem/[id] -> Change a specific ToDo Item to Done.
